@@ -17,5 +17,7 @@ else()
 endif()
 
 add_subdirectory(dual_arm_controller)
+add_subdirectory(mobile_arm_controller)
+add_subdirectory(robots/mc_dingo)
 add_subdirectory(robots/mc_kinova)
 add_subdirectory(robots/mc_ur5e)
