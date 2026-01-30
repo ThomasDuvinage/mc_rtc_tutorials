@@ -5,10 +5,15 @@ services:
     image: mc_rtc_tutorials:humble
     user: root
     container_name: mc_rtc_tutorials
+    environment:
+      DISPLAY: $DISPLAY
     build:
       context: ..
       dockerfile: ./dockerfiles/Dockerfile
     volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/root/.Xauthority
+
       - "..:/root/mc_rtc_ws/"
       - "../robots_description/:/root/colcon_ws/src/"
       - "../robots/:/root/mc_robots/"
