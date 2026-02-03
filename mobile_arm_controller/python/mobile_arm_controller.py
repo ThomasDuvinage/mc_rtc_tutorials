@@ -98,10 +98,10 @@ class MobileArmController(mc_control.MCPythonController):
         return True
 
     def reset_callback(self, data):
-        self.doorKinematics = mc_solver.KinematicsConstraint(
+        self._doorKinematics = mc_solver.KinematicsConstraint(
             self.robots(), 2, self.qpsolver.timeStep
         )
-        self.qpsolver.addConstraintSet(self.doorKinematics)
+        self.qpsolver.addConstraintSet(self._doorKinematics)
         self.robots().robot(0).posW(
             sva.PTransformd(sva.RotZ(0), eigen.Vector3d(0.0, 0.0, 0.5))
         )
