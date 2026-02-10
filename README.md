@@ -101,7 +101,7 @@ docker exec -it mc_rtc_tutorials bash
 If you are not using Docker or do not want to exit your container. Navigate to the `build` directory and rebuild the project.
 ```bash
 cd build/
-ccmake ..
+cmake ..
 make
 sudo make install
 ```
