@@ -27,8 +27,8 @@ jobs:
 
       - name: Tag image
         run: |
-          docker tag mc_rtc_tutorials ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:latest
+          docker tag mc_rtc_tutorials ghcr.io/${{ github.repository }}:latest
 
       - name: Push image
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:latest
+          docker push ghcr.io/${{ github.repository }}:latest
