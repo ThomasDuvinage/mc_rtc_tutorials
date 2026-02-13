@@ -6,30 +6,26 @@ This repository contains various tutorials for [mc_rtc](https://jrl.cnrs.fr/mc_r
 - **mobile_arm_controller**: This tutorial focuses on controlling a mobile manipulator robot using C++ and Python. It illustrates how to manage both the mobility and manipulation capabilities of the robot.
 
 ## Installation
+Clone this repository to your local machine:
+```bash
+git clone --recursive https://github.com/isri-aist/mc_rtc_tutorials.git
+```
 ### With docker (recommended)
 To easily set up the environment for running the tutorials, you can use Docker. Follow these steps:
 1. Install [Docker Desktop](https://docs.docker.com/get-started/get-docker/) (or [Docker Engine](https://docs.docker.com/engine/install/)) and [Docker Compose](https://docs.docker.com/compose/install/) on your system if you haven't already.
-2. Clone this repository to your local machine:
-   ```bash
-   git clone --recursive https://github.com/HACHIX-CORPORATION/mc_rtc_tutorials.git
-   ```
-3. Navigate to the `dockerfiles` directory of cloned repository and build, run the Docker container using Docker Compose:
+2. Navigate to the `dockerfiles` directory of cloned repository and build, run the Docker container using Docker Compose:
    ```bash
    cd mc_rtc_tutorials/dockerfiles
    docker compose up -d
    ```
-4. Access the running container:
+3. Access the running container:
    ```bash
    docker exec -it mc_rtc_tutorials bash
    ```
 ### Without docker
 It is not recommended to run the tutorials without Docker since it is mixed between independent CMake projects and ROS2 packages. However, if you want to run the tutorials without Docker, make sure to follow these steps:
 1. Install [mc_rtc](https://jrl.cnrs.fr/mc_rtc/) on your system.
-2. Clone this repository to your local machine:
-   ```bash
-   git clone --recursive https://github.com/HACHIX-CORPORATION/mc_rtc_tutorials.git
-   ```
-3. Build `robots_description` ROS2 packages in a colcon workspace (assuming you have ROS2 Humble installed, and sourced):
+2. Build `robots_description` ROS2 packages in a colcon workspace (assuming you have ROS2 Humble installed, and sourced):
    ```zsh
    cd robots_description/
    colcon build
@@ -38,7 +34,7 @@ It is not recommended to run the tutorials without Docker since it is mixed betw
    ```bash
    source install/setup.bash
    ```
-4. Navigate to the tutorial directories and build them using CMake for C++ examples or run the Python scripts directly.
+3. Navigate to the tutorial directories and build them using CMake for C++ examples or run the Python scripts directly.
     ```
     mkdir build && cd build
     cmake ..
