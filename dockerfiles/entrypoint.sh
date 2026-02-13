@@ -4,7 +4,7 @@ set -e
 source /opt/ros/humble/setup.bash
 
 cd /root/colcon_ws
-colcon build
+colcon build --cmake-args -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 if [ -f "/root/colcon_ws/install/setup.bash" ]; then
   source "/root/colcon_ws/install/setup.bash"

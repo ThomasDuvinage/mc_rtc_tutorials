@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y \
     kitware-archive-keyring \
     cmake \
     ros-humble-gazebo-ros-pkgs \
+    ros-humble-hardware-interface \
     && rm -rf /var/lib/apt/lists/*~
 
 COPY ./dockerfiles/entrypoint.sh /entrypoint.sh
