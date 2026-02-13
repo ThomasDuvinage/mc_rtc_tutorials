@@ -14,6 +14,7 @@
 [submodule "robots_description/ros2_kortex"]
 	path = robots_description/ros2_kortex
 	url = https://github.com/Kinovarobotics/ros2_kortex
+	branch = humble
 [submodule "robots_description/dingo"]
 	path = robots_description/dingo
 	url = https://github.com/HACHIX-CORPORATION/dingo
